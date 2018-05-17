@@ -48,7 +48,7 @@ MODEL_IDS = {
 }
 
 def get_model_id(name):
-  out = MODEL_IDS.get(name)
-  if out is None:
-    out = name
-  return out
+    out = MODEL_IDS.get(name)
+    if out is None:
+        out = name
+    return out
