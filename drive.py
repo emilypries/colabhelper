@@ -34,3 +34,21 @@ def download(file_id="0B9jhaT37ydSyb0NuYmk2ZEpOR0E", destination='./model.ckpt')
     import sys
     # DESTINATION FILE ON YOUR DISK
     download_file_from_google_drive(file_id, destination)
+
+# Google Drive ids for style transfer models via Logan Engstrom
+# https://drive.google.com/drive/folders/0B9jhaT37ydSyRk9UX0wwX3BpMzQ?usp=sharing
+# https://github.com/lengstrom/fast-style-transfer
+MODEL_IDS = {
+    "udnie": "0B9jhaT37ydSyb0NuYmk2ZEpOR0E",
+    "wreck": "0B9jhaT37ydSySjNrM3J5N2gweVk",
+    "wave": "0B9jhaT37ydSyVGk0TC10bDF1S28",
+    "scream": "0B9jhaT37ydSyZ0RyTGU0Q2xiU28",
+    "rain": "0B9jhaT37ydSyaEJlSFlIeUxweGs",
+    "lamuse": "0B9jhaT37ydSyQU1sYW02Sm9kV3c"   
+}
+
+def get_model_id(name):
+  out = MODEL_IDS.get(name)
+  if out is None:
+    out = name
+  return out
