@@ -52,3 +52,6 @@ def get_model_id(name):
     if out is None:
         out = name
     return out
+
+def get_drive_id(url):
+    return url[url.index("id=")+3:]
